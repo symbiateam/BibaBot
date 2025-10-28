@@ -28,10 +28,8 @@ ENV container=docker
 
 WORKDIR /app
 
-# Copy the repo, particularly environment variables with discord API keys
+# Copy the repo
 COPY . .
-# Run first-time setup for faster restarts
-RUN ./install.sh
 
 # Expose app port
 EXPOSE 3000
